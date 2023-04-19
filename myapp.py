@@ -14,4 +14,4 @@ def sample():
         user=app.config['USER'], password=app.config['PASSWD']) as conn:
         with conn.cursor() as cur:
             cur.execute("SELECT * FROM actor")
-            return str(cur.fetchmany(10)[0])
+            return str(cur.fetchmany(10)[1])
